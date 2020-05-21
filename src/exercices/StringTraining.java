@@ -138,18 +138,8 @@ public class StringTraining {
     public static String replaceChar(String string, char search, char replace) {
         String stringSearch = String.valueOf(search);
         String stringReplace = String.valueOf(replace);
-        String stringCompare = "";
-        String stringReplaced = "";
 
-        for(int i=0;i<string.length();i++) {
-            stringCompare = string.substring(i,i+1);
-            if ( stringCompare.equals(stringSearch) ) {
-                stringReplaced += stringReplace;
-            } else {
-                stringReplaced += stringCompare;
-            }
-        }
-        return stringReplaced;
+        return string.replaceAll(stringSearch,stringReplace);
     }
 
     /**
@@ -159,19 +149,7 @@ public class StringTraining {
      * @return the string where searched substring are replaced, eg: "toast"
      */
     public static String replaceString(String string, String search, String replace) {
-        String stringCompare = "";
-        String stringReplaced = "";
-
-        for(int i=0;i<string.length();i++) {
-            stringCompare = string.substring(i,i+search.length());
-            if ( stringCompare.equals(search) ) {
-                stringReplaced += replace;
-            } else {
-                stringReplaced += string.substring(i,i+1);
-            }
-        }
-
-        return stringReplaced;
+        return string.replaceAll(search,replace);
     }
 
     /**
