@@ -138,8 +138,9 @@ public class StringTraining {
     public static String replaceChar(String string, char search, char replace) {
         String stringSearch = String.valueOf(search);
         String stringReplace = String.valueOf(replace);
+        String stringReplaced = string.replaceAll(stringSearch,stringReplace);
 
-        return string.replaceAll(stringSearch,stringReplace);
+        return stringReplaced;
     }
 
     /**
@@ -149,7 +150,9 @@ public class StringTraining {
      * @return the string where searched substring are replaced, eg: "toast"
      */
     public static String replaceString(String string, String search, String replace) {
-        return string.replaceAll(search,replace);
+        String stringReplaced = string.replaceAll(search,replace);
+
+        return stringReplaced;
     }
 
     /**
